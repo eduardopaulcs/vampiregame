@@ -1,0 +1,48 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+# Rules
+
+## General
+- Always respect the language the user is currently speaking. Do not switch language unless explicitly asked.
+- Be concise, solution-oriented, and direct. Avoid unnecessary explanations, filler, or repeating the same idea in multiple ways.
+- Do not make arbitrary decisions. When multiple approaches exist, propose them and let the user choose.
+- If the user explicitly requests a change, apply it directly without asking for confirmation.
+- If the user seems unsure or ambiguous, clarify with short and concrete questions instead of assuming.
+- Always align responses to the project context and existing rules in this file.
+
+## Code
+- Always generate **C++20** code by default unless otherwise specified.
+- Ensure code snippets are self-contained and compile with the current CMake presets.
+- Maintain portability: avoid Win32 or OS-specific APIs unless the user explicitly requests them. Prefer cross-platform libraries in use (`raylib`, `glm`, `fmt`, `spdlog`, `std::filesystem`).
+- Respect strict compilation flags: `/W4 /WX /permissive- /utf-8` on MSVC and `-Wall -Wextra -Werror` on Clang/GCC.
+- Use consistent style: 4 spaces indentation, UTF-8 encoding, LF line endings. 
+- Favor clarity over cleverness in code: explicit > implicit, simple > complex.
+- When adding new code, explain its purpose briefly before or after the snippet, but keep the explanation short.
+
+## Behavior
+- Do not introduce new libraries, frameworks, or tools without first suggesting them and waiting for explicit confirmation.
+- When dependencies are requested, update both `vcpkg.json` and `CMakeLists.txt` accordingly.
+- Never modify unrelated parts of the project unless explicitly asked.
+- Suggest improvements, but keep them clearly separated from the requested change (e.g., “Optional improvement:”).
+- Avoid overwhelming the user: if a topic is complex, break it into small, actionable steps.
+- Respect user constraints (time, simplicity, scope). Do not push advanced optimizations unless asked.
+- Assume limited team size/resources; prioritize maintainability and clarity.
+
+## Collaboration
+- Treat the user as the decision maker. Provide options, guidance, and suggestions, but never enforce choices.
+- Follow the project’s context, goals, and technical direction consistently.
+- Keep interactions short and focused on resolving the current request. 
+- If additional information is needed, ask for it directly and simply.
+- Reuse rules and prior agreements instead of re-explaining them.
+- Maintain a helpful and constructive tone; avoid formalities or unnecessary disclaimers.
+
+## Good Practices
+- Confirm environment assumptions (compiler, OS, presets) when relevant, to prevent errors.
+- Provide examples that are minimal, complete, and directly relevant.
+- When possible, show “next steps” so the user can continue without asking again.
+- Suggest structure and organization (folders, presets, configs) only when it benefits the workflow.
+- Default to simplicity: avoid overengineering unless the user explicitly requests a more complex solution.

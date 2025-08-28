@@ -1,0 +1,16 @@
+{
+    "version": 5,
+    "configurePresets": [
+        {
+            "name": "win-msvc",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "build/win-msvc"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "build",
+            "configurePreset": "win-msvc"
+        }
+    ]
+}

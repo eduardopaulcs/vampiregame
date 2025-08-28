@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "clangd.vscode-clangd",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.hexeditor"
+    ]
+}
