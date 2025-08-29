@@ -45,15 +45,16 @@
             "dependsOn": "Configure Project"
         },
         {
-            "label": "Clean Build",
+            "label": "Build Clean Project",
             "type": "shell",
             "command": "cmake",
             "args": [
                 "--build",
                 "--preset",
                 "build",
-                "--target",
-                "clean"
+                "--config",
+                "Debug",
+                "--clean-first"
             ],
             "group": "build",
             "presentation": {
@@ -61,7 +62,11 @@
                 "reveal": "always",
                 "focus": false,
                 "panel": "shared"
-            }
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "dependsOn": "Configure Project"
         }
     ]
 }
