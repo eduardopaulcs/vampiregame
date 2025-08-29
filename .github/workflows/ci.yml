@@ -31,6 +31,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Install system dependencies (Ubuntu)
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libltdl-dev
+
     - name: Setup vcpkg
       uses: lukka/run-vcpkg@v11
       with:
