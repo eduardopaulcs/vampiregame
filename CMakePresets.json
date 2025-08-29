@@ -4,7 +4,11 @@
         {
             "name": "win-msvc",
             "generator": "Visual Studio 17 2022",
-            "binaryDir": "build/win-msvc"
+            "binaryDir": "build/win-msvc",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "C:/vcpkg-vampiregame/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_PREFIX_PATH": "${sourceDir}/vcpkg_installed/x64-windows"
+            }
         }
     ],
     "buildPresets": [

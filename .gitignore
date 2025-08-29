@@ -61,3 +61,6 @@ Makefile
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# vcpkg installed dependencies
+vcpkg_installed/

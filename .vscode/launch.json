@@ -25,30 +25,6 @@
                 "moduleLoad": false,
                 "trace": false
             }
-        },
-        {
-            "name": "Run",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/build/win-msvc/Release/game.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "preLaunchTask": "Build Release",
-            "MIMode": "gdb",
-            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Disable all debugging",
-                    "text": "set confirm off",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Continue immediately",
-                    "text": "continue",
-                    "ignoreFailures": true
-                }
-            ]
         }
     ]
 }

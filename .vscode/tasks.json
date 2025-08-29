@@ -19,7 +19,7 @@
             "problemMatcher": []
         },
         {
-            "label": "Build Debug",
+            "label": "Build Project",
             "type": "shell",
             "command": "cmake",
             "args": [
@@ -33,29 +33,6 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared"
-            },
-            "problemMatcher": [
-                "$msCompile"
-            ],
-            "dependsOn": "Configure Project"
-        },
-        {
-            "label": "Build Release",
-            "type": "shell",
-            "command": "cmake",
-            "args": [
-                "--build",
-                "--preset",
-                "build",
-                "--config",
-                "Release"
-            ],
-            "group": "build",
             "presentation": {
                 "echo": true,
                 "reveal": "always",
