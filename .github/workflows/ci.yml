@@ -35,7 +35,7 @@ jobs:
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y libltdl-dev
+        sudo apt-get install -y libltdl-dev libx11-dev libxft-dev libxext-dev libwayland-dev libxkbcommon-dev libegl1-mesa-dev libibus-1.0-dev
 
     - name: Setup vcpkg
       uses: lukka/run-vcpkg@v11
